@@ -1,6 +1,6 @@
-﻿namespace CS162_Chapter12_ProgrammingProblems.FactoryClasses
+﻿namespace CS162_Chapter12_ProgrammingProblems.FactoryDemo.Classes
 {
-    public class TeamLeader:Production_Worker
+    public class TeamLeader : Production_Worker
     {
         public int RequiredTrainingHours { get; init; }
 

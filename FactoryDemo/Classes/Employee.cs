@@ -1,6 +1,6 @@
-﻿namespace CS162_Chapter12_ProgrammingProblems.FactoryClasses
+﻿namespace CS162_Chapter12_ProgrammingProblems.FactoryDemo.Classes
 {
-     public class Employee
+    public class Employee
     {
         public string Name { get; set; }
         public int Number { get; set; }

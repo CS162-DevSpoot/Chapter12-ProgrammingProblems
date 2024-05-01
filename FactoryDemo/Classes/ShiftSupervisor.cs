@@ -1,6 +1,6 @@
-﻿namespace CS162_Chapter12_ProgrammingProblems.FactoryClasses
+﻿namespace CS162_Chapter12_ProgrammingProblems.FactoryDemo.Classes
 {
-    public class ShiftSupervisor:Employee
+    public class ShiftSupervisor : Employee
     {
         public decimal Salary { get; set; }
         public decimal Bonous { get; set; }
@@ -11,7 +11,7 @@
             Bonous = 0;
         }
 
-        public ShiftSupervisor(string name, int number, decimal salary, decimal bonous) :base(name, number)
+        public ShiftSupervisor(string name, int number, decimal salary, decimal bonous) : base(name, number)
         {
             Salary = salary;
             Bonous = bonous;

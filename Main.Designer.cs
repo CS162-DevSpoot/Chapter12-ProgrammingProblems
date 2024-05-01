@@ -28,18 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            factoryDemo_Button = new Button();
+            exit_Button = new Button();
             SuspendLayout();
+            // 
+            // factoryDemo_Button
+            // 
+            factoryDemo_Button.Location = new Point(12, 12);
+            factoryDemo_Button.Name = "factoryDemo_Button";
+            factoryDemo_Button.Size = new Size(214, 23);
+            factoryDemo_Button.TabIndex = 0;
+            factoryDemo_Button.Text = "Factory Demo";
+            factoryDemo_Button.UseVisualStyleBackColor = true;
+            factoryDemo_Button.Click += factoryDemo_Button_Click;
+            // 
+            // exit_Button
+            // 
+            exit_Button.BackColor = Color.Tomato;
+            exit_Button.ForeColor = SystemColors.Control;
+            exit_Button.Location = new Point(12, 415);
+            exit_Button.Name = "exit_Button";
+            exit_Button.Size = new Size(214, 23);
+            exit_Button.TabIndex = 1;
+            exit_Button.Text = "EXIT";
+            exit_Button.UseVisualStyleBackColor = false;
+            exit_Button.Click += exit_Button_Click;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(exit_Button);
+            Controls.Add(factoryDemo_Button);
             Name = "Main";
             Text = "Main";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button factoryDemo_Button;
+        private Button exit_Button;
     }
 }
