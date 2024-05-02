@@ -43,6 +43,7 @@
             manageEmployee_Button.TabIndex = 0;
             manageEmployee_Button.Text = "Manage Employees";
             manageEmployee_Button.UseVisualStyleBackColor = false;
+            manageEmployee_Button.Click += manageEmployee_Button_Click;
             // 
             // manageShifts_Button
             // 
@@ -74,6 +75,7 @@
             close_Button.TabIndex = 3;
             close_Button.Text = "Close";
             close_Button.UseVisualStyleBackColor = false;
+            close_Button.Click += close_Button_Click;
             // 
             // FactoryMain
             // 

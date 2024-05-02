@@ -31,22 +31,32 @@
             groupBox1 = new GroupBox();
             employees_ListBox = new ListBox();
             groupBox2 = new GroupBox();
-            label1 = new Label();
-            role_Label = new Label();
-            hrPay_Label = new Label();
-            label4 = new Label();
-            name_Label = new Label();
-            label6 = new Label();
-            number_Label = new Label();
-            label8 = new Label();
-            salary_Label = new Label();
-            label10 = new Label();
-            bonous_Label = new Label();
-            label12 = new Label();
+            terminate_Button = new Button();
             monthlyBonous_Label = new Label();
             label14 = new Label();
-            terminate_Button = new Button();
+            bonous_Label = new Label();
+            label12 = new Label();
+            salary_Label = new Label();
+            label10 = new Label();
+            number_Label = new Label();
+            label8 = new Label();
+            name_Label = new Label();
+            label6 = new Label();
+            hrPay_Label = new Label();
+            label4 = new Label();
+            role_Label = new Label();
+            label1 = new Label();
             groupBox3 = new GroupBox();
+            bonous_TextBox = new TextBox();
+            salary_TextBox = new TextBox();
+            monthlyBonous_TextBox = new TextBox();
+            number_TextBox = new TextBox();
+            name_TextBox = new TextBox();
+            hrPay_TextBox = new TextBox();
+            groupBox4 = new GroupBox();
+            supervisor_RadioButton = new RadioButton();
+            teamLead_RadioButton = new RadioButton();
+            production_RadioButton = new RadioButton();
             addEmployee_Button = new Button();
             label3 = new Label();
             label7 = new Label();
@@ -54,17 +64,6 @@
             label15 = new Label();
             label17 = new Label();
             label19 = new Label();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            groupBox4 = new GroupBox();
-            production_RadioButton = new RadioButton();
-            teamLead_RadioButton = new RadioButton();
-            supervisor_RadioButton = new RadioButton();
-            hrPay_TextBox = new TextBox();
-            name_TextBox = new TextBox();
-            number_TextBox = new TextBox();
-            monthlyBonous_TextBox = new TextBox();
-            salary_TextBox = new TextBox();
-            bonous_TextBox = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -121,137 +120,15 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Select An Employee To View Their Infomation";
             // 
-            // label1
+            // terminate_Button
             // 
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(15, 22);
-            label1.Name = "label1";
-            label1.Size = new Size(112, 23);
-            label1.TabIndex = 0;
-            label1.Text = "ROLE";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // role_Label
-            // 
-            role_Label.BackColor = Color.FromArgb(25, 25, 25);
-            role_Label.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            role_Label.ForeColor = SystemColors.Control;
-            role_Label.Location = new Point(15, 45);
-            role_Label.Name = "role_Label";
-            role_Label.Size = new Size(112, 28);
-            role_Label.TabIndex = 1;
-            role_Label.Text = "Production-Worker";
-            role_Label.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // hrPay_Label
-            // 
-            hrPay_Label.BackColor = Color.FromArgb(25, 25, 25);
-            hrPay_Label.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            hrPay_Label.ForeColor = SystemColors.Control;
-            hrPay_Label.Location = new Point(15, 115);
-            hrPay_Label.Name = "hrPay_Label";
-            hrPay_Label.Size = new Size(112, 28);
-            hrPay_Label.TabIndex = 3;
-            hrPay_Label.Text = "$20/hr";
-            hrPay_Label.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(15, 92);
-            label4.Name = "label4";
-            label4.Size = new Size(112, 23);
-            label4.TabIndex = 2;
-            label4.Text = "HOURLY PAY";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // name_Label
-            // 
-            name_Label.BackColor = Color.FromArgb(25, 25, 25);
-            name_Label.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            name_Label.ForeColor = SystemColors.Control;
-            name_Label.Location = new Point(145, 45);
-            name_Label.Name = "name_Label";
-            name_Label.Size = new Size(112, 28);
-            name_Label.TabIndex = 5;
-            name_Label.Text = "John Doe";
-            name_Label.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            label6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(145, 22);
-            label6.Name = "label6";
-            label6.Size = new Size(112, 23);
-            label6.TabIndex = 4;
-            label6.Text = "NAME";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // number_Label
-            // 
-            number_Label.BackColor = Color.FromArgb(25, 25, 25);
-            number_Label.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            number_Label.ForeColor = SystemColors.Control;
-            number_Label.Location = new Point(273, 45);
-            number_Label.Name = "number_Label";
-            number_Label.Size = new Size(112, 28);
-            number_Label.TabIndex = 7;
-            number_Label.Text = "000000";
-            number_Label.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            label8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(273, 22);
-            label8.Name = "label8";
-            label8.Size = new Size(112, 23);
-            label8.TabIndex = 6;
-            label8.Text = "NUMBER";
-            label8.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // salary_Label
-            // 
-            salary_Label.BackColor = Color.FromArgb(25, 25, 25);
-            salary_Label.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            salary_Label.ForeColor = SystemColors.Control;
-            salary_Label.Location = new Point(145, 115);
-            salary_Label.Name = "salary_Label";
-            salary_Label.Size = new Size(112, 28);
-            salary_Label.TabIndex = 9;
-            salary_Label.Text = "$95,300";
-            salary_Label.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            label10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(145, 92);
-            label10.Name = "label10";
-            label10.Size = new Size(112, 23);
-            label10.TabIndex = 8;
-            label10.Text = "SALARY";
-            label10.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // bonous_Label
-            // 
-            bonous_Label.BackColor = Color.FromArgb(25, 25, 25);
-            bonous_Label.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            bonous_Label.ForeColor = SystemColors.Control;
-            bonous_Label.Location = new Point(273, 115);
-            bonous_Label.Name = "bonous_Label";
-            bonous_Label.Size = new Size(112, 28);
-            bonous_Label.TabIndex = 11;
-            bonous_Label.Text = "$2,000";
-            bonous_Label.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            label12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.Location = new Point(273, 92);
-            label12.Name = "label12";
-            label12.Size = new Size(112, 23);
-            label12.TabIndex = 10;
-            label12.Text = "BONOUS";
-            label12.TextAlign = ContentAlignment.MiddleCenter;
+            terminate_Button.ForeColor = Color.Crimson;
+            terminate_Button.Location = new Point(145, 181);
+            terminate_Button.Name = "terminate_Button";
+            terminate_Button.Size = new Size(240, 28);
+            terminate_Button.TabIndex = 14;
+            terminate_Button.Text = "TERMINATE";
+            terminate_Button.UseVisualStyleBackColor = true;
             // 
             // monthlyBonous_Label
             // 
@@ -275,15 +152,137 @@
             label14.Text = "MONTHLY BONOUS";
             label14.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // terminate_Button
+            // bonous_Label
             // 
-            terminate_Button.ForeColor = Color.Crimson;
-            terminate_Button.Location = new Point(145, 181);
-            terminate_Button.Name = "terminate_Button";
-            terminate_Button.Size = new Size(240, 28);
-            terminate_Button.TabIndex = 14;
-            terminate_Button.Text = "TERMINATE";
-            terminate_Button.UseVisualStyleBackColor = true;
+            bonous_Label.BackColor = Color.FromArgb(25, 25, 25);
+            bonous_Label.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bonous_Label.ForeColor = SystemColors.Control;
+            bonous_Label.Location = new Point(273, 115);
+            bonous_Label.Name = "bonous_Label";
+            bonous_Label.Size = new Size(112, 28);
+            bonous_Label.TabIndex = 11;
+            bonous_Label.Text = "$2,000";
+            bonous_Label.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            label12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Location = new Point(273, 92);
+            label12.Name = "label12";
+            label12.Size = new Size(112, 23);
+            label12.TabIndex = 10;
+            label12.Text = "BONOUS";
+            label12.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // salary_Label
+            // 
+            salary_Label.BackColor = Color.FromArgb(25, 25, 25);
+            salary_Label.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            salary_Label.ForeColor = SystemColors.Control;
+            salary_Label.Location = new Point(145, 115);
+            salary_Label.Name = "salary_Label";
+            salary_Label.Size = new Size(112, 28);
+            salary_Label.TabIndex = 9;
+            salary_Label.Text = "$95,300";
+            salary_Label.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(145, 92);
+            label10.Name = "label10";
+            label10.Size = new Size(112, 23);
+            label10.TabIndex = 8;
+            label10.Text = "SALARY";
+            label10.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // number_Label
+            // 
+            number_Label.BackColor = Color.FromArgb(25, 25, 25);
+            number_Label.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            number_Label.ForeColor = SystemColors.Control;
+            number_Label.Location = new Point(273, 45);
+            number_Label.Name = "number_Label";
+            number_Label.Size = new Size(112, 28);
+            number_Label.TabIndex = 7;
+            number_Label.Text = "000000";
+            number_Label.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(273, 22);
+            label8.Name = "label8";
+            label8.Size = new Size(112, 23);
+            label8.TabIndex = 6;
+            label8.Text = "NUMBER";
+            label8.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // name_Label
+            // 
+            name_Label.BackColor = Color.FromArgb(25, 25, 25);
+            name_Label.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            name_Label.ForeColor = SystemColors.Control;
+            name_Label.Location = new Point(145, 45);
+            name_Label.Name = "name_Label";
+            name_Label.Size = new Size(112, 28);
+            name_Label.TabIndex = 5;
+            name_Label.Text = "John Doe";
+            name_Label.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(145, 22);
+            label6.Name = "label6";
+            label6.Size = new Size(112, 23);
+            label6.TabIndex = 4;
+            label6.Text = "NAME";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // hrPay_Label
+            // 
+            hrPay_Label.BackColor = Color.FromArgb(25, 25, 25);
+            hrPay_Label.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            hrPay_Label.ForeColor = SystemColors.Control;
+            hrPay_Label.Location = new Point(15, 115);
+            hrPay_Label.Name = "hrPay_Label";
+            hrPay_Label.Size = new Size(112, 28);
+            hrPay_Label.TabIndex = 3;
+            hrPay_Label.Text = "$20/hr";
+            hrPay_Label.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(15, 92);
+            label4.Name = "label4";
+            label4.Size = new Size(112, 23);
+            label4.TabIndex = 2;
+            label4.Text = "HOURLY PAY";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // role_Label
+            // 
+            role_Label.BackColor = Color.FromArgb(25, 25, 25);
+            role_Label.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            role_Label.ForeColor = SystemColors.Control;
+            role_Label.Location = new Point(15, 45);
+            role_Label.Name = "role_Label";
+            role_Label.Size = new Size(112, 28);
+            role_Label.TabIndex = 1;
+            role_Label.Text = "Production-Worker";
+            role_Label.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(15, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(112, 23);
+            label1.TabIndex = 0;
+            label1.Text = "ROLE";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // groupBox3
             // 
@@ -310,6 +309,112 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Add A New Employee";
             // 
+            // bonous_TextBox
+            // 
+            bonous_TextBox.BackColor = Color.FromArgb(25, 25, 25);
+            bonous_TextBox.Enabled = false;
+            bonous_TextBox.ForeColor = SystemColors.Info;
+            bonous_TextBox.Location = new Point(273, 153);
+            bonous_TextBox.Name = "bonous_TextBox";
+            bonous_TextBox.Size = new Size(112, 23);
+            bonous_TextBox.TabIndex = 21;
+            // 
+            // salary_TextBox
+            // 
+            salary_TextBox.BackColor = Color.FromArgb(25, 25, 25);
+            salary_TextBox.Enabled = false;
+            salary_TextBox.ForeColor = SystemColors.Info;
+            salary_TextBox.Location = new Point(145, 153);
+            salary_TextBox.Name = "salary_TextBox";
+            salary_TextBox.Size = new Size(112, 23);
+            salary_TextBox.TabIndex = 20;
+            // 
+            // monthlyBonous_TextBox
+            // 
+            monthlyBonous_TextBox.BackColor = Color.FromArgb(25, 25, 25);
+            monthlyBonous_TextBox.Enabled = false;
+            monthlyBonous_TextBox.ForeColor = SystemColors.Info;
+            monthlyBonous_TextBox.Location = new Point(15, 153);
+            monthlyBonous_TextBox.Name = "monthlyBonous_TextBox";
+            monthlyBonous_TextBox.Size = new Size(112, 23);
+            monthlyBonous_TextBox.TabIndex = 19;
+            // 
+            // number_TextBox
+            // 
+            number_TextBox.BackColor = Color.FromArgb(25, 25, 25);
+            number_TextBox.ForeColor = SystemColors.Info;
+            number_TextBox.Location = new Point(273, 80);
+            number_TextBox.Name = "number_TextBox";
+            number_TextBox.Size = new Size(112, 23);
+            number_TextBox.TabIndex = 18;
+            // 
+            // name_TextBox
+            // 
+            name_TextBox.BackColor = Color.FromArgb(25, 25, 25);
+            name_TextBox.ForeColor = SystemColors.Info;
+            name_TextBox.Location = new Point(145, 80);
+            name_TextBox.Name = "name_TextBox";
+            name_TextBox.Size = new Size(112, 23);
+            name_TextBox.TabIndex = 17;
+            // 
+            // hrPay_TextBox
+            // 
+            hrPay_TextBox.BackColor = Color.FromArgb(25, 25, 25);
+            hrPay_TextBox.ForeColor = SystemColors.Info;
+            hrPay_TextBox.Location = new Point(15, 80);
+            hrPay_TextBox.Name = "hrPay_TextBox";
+            hrPay_TextBox.Size = new Size(112, 23);
+            hrPay_TextBox.TabIndex = 16;
+            // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(supervisor_RadioButton);
+            groupBox4.Controls.Add(teamLead_RadioButton);
+            groupBox4.Controls.Add(production_RadioButton);
+            groupBox4.ForeColor = Color.SpringGreen;
+            groupBox4.Location = new Point(15, 17);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(370, 37);
+            groupBox4.TabIndex = 15;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Role";
+            // 
+            // supervisor_RadioButton
+            // 
+            supervisor_RadioButton.AutoSize = true;
+            supervisor_RadioButton.ForeColor = Color.Honeydew;
+            supervisor_RadioButton.Location = new Point(278, 12);
+            supervisor_RadioButton.Name = "supervisor_RadioButton";
+            supervisor_RadioButton.Size = new Size(85, 19);
+            supervisor_RadioButton.TabIndex = 2;
+            supervisor_RadioButton.Text = "Supervisor";
+            supervisor_RadioButton.UseVisualStyleBackColor = true;
+            supervisor_RadioButton.Click += role_Changed;
+            // 
+            // teamLead_RadioButton
+            // 
+            teamLead_RadioButton.AutoSize = true;
+            teamLead_RadioButton.ForeColor = Color.Honeydew;
+            teamLead_RadioButton.Location = new Point(143, 12);
+            teamLead_RadioButton.Name = "teamLead_RadioButton";
+            teamLead_RadioButton.Size = new Size(84, 19);
+            teamLead_RadioButton.TabIndex = 1;
+            teamLead_RadioButton.Text = "Team Lead";
+            teamLead_RadioButton.UseVisualStyleBackColor = true;
+            teamLead_RadioButton.Click += role_Changed;
+            // 
+            // production_RadioButton
+            // 
+            production_RadioButton.AutoSize = true;
+            production_RadioButton.ForeColor = Color.Honeydew;
+            production_RadioButton.Location = new Point(6, 12);
+            production_RadioButton.Name = "production_RadioButton";
+            production_RadioButton.Size = new Size(86, 19);
+            production_RadioButton.TabIndex = 0;
+            production_RadioButton.Text = "Production";
+            production_RadioButton.UseVisualStyleBackColor = true;
+            production_RadioButton.Click += role_Changed;
+            // 
             // addEmployee_Button
             // 
             addEmployee_Button.ForeColor = Color.MediumAquamarine;
@@ -319,6 +424,7 @@
             addEmployee_Button.TabIndex = 14;
             addEmployee_Button.Text = "ADD EMPLOYEE";
             addEmployee_Button.UseVisualStyleBackColor = true;
+            addEmployee_Button.Click += addEmployee_Button_Click;
             // 
             // label3
             // 
@@ -380,111 +486,6 @@
             label19.Text = "HOURLY PAY";
             label19.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // groupBox4
-            // 
-            groupBox4.Controls.Add(supervisor_RadioButton);
-            groupBox4.Controls.Add(teamLead_RadioButton);
-            groupBox4.Controls.Add(production_RadioButton);
-            groupBox4.ForeColor = Color.SpringGreen;
-            groupBox4.Location = new Point(15, 17);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(370, 37);
-            groupBox4.TabIndex = 15;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Role";
-            // 
-            // production_RadioButton
-            // 
-            production_RadioButton.AutoSize = true;
-            production_RadioButton.ForeColor = Color.Honeydew;
-            production_RadioButton.Location = new Point(6, 12);
-            production_RadioButton.Name = "production_RadioButton";
-            production_RadioButton.Size = new Size(86, 19);
-            production_RadioButton.TabIndex = 0;
-            production_RadioButton.TabStop = true;
-            production_RadioButton.Text = "Production";
-            production_RadioButton.UseVisualStyleBackColor = true;
-            // 
-            // teamLead_RadioButton
-            // 
-            teamLead_RadioButton.AutoCheck = false;
-            teamLead_RadioButton.AutoSize = true;
-            teamLead_RadioButton.ForeColor = Color.Honeydew;
-            teamLead_RadioButton.Location = new Point(143, 12);
-            teamLead_RadioButton.Name = "teamLead_RadioButton";
-            teamLead_RadioButton.Size = new Size(84, 19);
-            teamLead_RadioButton.TabIndex = 1;
-            teamLead_RadioButton.TabStop = true;
-            teamLead_RadioButton.Text = "Team Lead";
-            teamLead_RadioButton.UseVisualStyleBackColor = true;
-            // 
-            // supervisor_RadioButton
-            // 
-            supervisor_RadioButton.AutoCheck = false;
-            supervisor_RadioButton.AutoSize = true;
-            supervisor_RadioButton.ForeColor = Color.Honeydew;
-            supervisor_RadioButton.Location = new Point(278, 12);
-            supervisor_RadioButton.Name = "supervisor_RadioButton";
-            supervisor_RadioButton.Size = new Size(85, 19);
-            supervisor_RadioButton.TabIndex = 2;
-            supervisor_RadioButton.TabStop = true;
-            supervisor_RadioButton.Text = "Supervisor";
-            supervisor_RadioButton.UseVisualStyleBackColor = true;
-            // 
-            // hrPay_TextBox
-            // 
-            hrPay_TextBox.BackColor = Color.FromArgb(25, 25, 25);
-            hrPay_TextBox.ForeColor = SystemColors.Info;
-            hrPay_TextBox.Location = new Point(15, 80);
-            hrPay_TextBox.Name = "hrPay_TextBox";
-            hrPay_TextBox.Size = new Size(112, 23);
-            hrPay_TextBox.TabIndex = 16;
-            // 
-            // name_TextBox
-            // 
-            name_TextBox.BackColor = Color.FromArgb(25, 25, 25);
-            name_TextBox.ForeColor = SystemColors.Info;
-            name_TextBox.Location = new Point(145, 80);
-            name_TextBox.Name = "name_TextBox";
-            name_TextBox.Size = new Size(112, 23);
-            name_TextBox.TabIndex = 17;
-            // 
-            // number_TextBox
-            // 
-            number_TextBox.BackColor = Color.FromArgb(25, 25, 25);
-            number_TextBox.ForeColor = SystemColors.Info;
-            number_TextBox.Location = new Point(273, 80);
-            number_TextBox.Name = "number_TextBox";
-            number_TextBox.Size = new Size(112, 23);
-            number_TextBox.TabIndex = 18;
-            // 
-            // monthlyBonous_TextBox
-            // 
-            monthlyBonous_TextBox.BackColor = Color.FromArgb(25, 25, 25);
-            monthlyBonous_TextBox.ForeColor = SystemColors.Info;
-            monthlyBonous_TextBox.Location = new Point(15, 153);
-            monthlyBonous_TextBox.Name = "monthlyBonous_TextBox";
-            monthlyBonous_TextBox.Size = new Size(112, 23);
-            monthlyBonous_TextBox.TabIndex = 19;
-            // 
-            // salary_TextBox
-            // 
-            salary_TextBox.BackColor = Color.FromArgb(25, 25, 25);
-            salary_TextBox.ForeColor = SystemColors.Info;
-            salary_TextBox.Location = new Point(145, 153);
-            salary_TextBox.Name = "salary_TextBox";
-            salary_TextBox.Size = new Size(112, 23);
-            salary_TextBox.TabIndex = 20;
-            // 
-            // bonous_TextBox
-            // 
-            bonous_TextBox.BackColor = Color.FromArgb(25, 25, 25);
-            bonous_TextBox.ForeColor = SystemColors.Info;
-            bonous_TextBox.Location = new Point(273, 153);
-            bonous_TextBox.Name = "bonous_TextBox";
-            bonous_TextBox.Size = new Size(112, 23);
-            bonous_TextBox.TabIndex = 21;
-            // 
             // ManageEmployees
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -538,7 +539,6 @@
         private Label label15;
         private Label label17;
         private Label label19;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private TextBox bonous_TextBox;
         private TextBox salary_TextBox;
         private TextBox monthlyBonous_TextBox;
