@@ -93,6 +93,7 @@
             employees_ListBox.Name = "employees_ListBox";
             employees_ListBox.Size = new Size(230, 435);
             employees_ListBox.TabIndex = 0;
+            employees_ListBox.SelectedIndexChanged += viewSelectedEmployee;
             // 
             // groupBox2
             // 

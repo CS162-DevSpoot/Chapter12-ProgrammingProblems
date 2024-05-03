@@ -120,5 +120,67 @@ namespace CS162_Chapter12_ProgrammingProblems.FactoryDemo.Views
                 employees_ListBox.Items.Add($"[SUPE] {staff.Name}");
             });
         }
+
+        int? currentSelectedIndex = null;
+
+        private void viewSelectedEmployee(object sender, EventArgs e)
+        {
+            ListBox senderList = (ListBox)sender;
+            string selectedValue = senderList.SelectedItem.ToString();
+            string[] empToken = selectedValue.Split();
+            int selectedIndex = senderList.SelectedIndex;
+            currentSelectedIndex = selectedIndex;
+
+            switch (empToken[0])
+            {
+                case "[PROD]":
+                    {
+                        Production_Worker selectedPW = productionStaff[selectedIndex];
+
+                        name_Label.Text = selectedPW.Name;
+                        number_Label.Text = selectedPW.Number.ToString();
+                        role_Label.Text = "Production-Worker";
+
+                        hrPay_Label.Text = selectedPW.HourlyRate.ToString();
+                        monthlyBonous_Label.Text = "N/A";
+                        salary_Label.Text = "N/A";
+                        bonous_Label.Text = "N/A";
+
+                        break;
+                    }
+
+                case "[LEAD]":
+                    {
+
+                        TeamLeader selectedLead = leads[selectedIndex];
+
+                        name_Label.Text = selectedLead.Name;
+                        number_Label.Text = selectedLead.Number.ToString();
+                        role_Label.Text = "Team Lead";
+
+                        hrPay_Label.Text = selectedLead.HourlyRate.ToString("c");
+                        monthlyBonous_Label.Text = selectedLead.MonthlyBonus.ToString("c");
+                        salary_Label.Text = "N/A";
+                        bonous_Label.Text = "N/A";
+                        break;
+                    }
+
+                case "[SUPE]":
+                    {
+                        ShiftSupervisor selectedSupervisor= supervisors[selectedIndex];
+
+                        name_Label.Text = selectedSupervisor.Name;
+                        number_Label.Text = selectedSupervisor.Number.ToString();
+                        role_Label.Text = "Shfit Supervisor";
+
+                        hrPay_Label.Text = "N/A";
+                        monthlyBonous_Label.Text = "N/A";
+                        salary_Label.Text = selectedSupervisor.Salary.ToString("c");
+                        bonous_Label.Text = selectedSupervisor.Bonous.ToString("c");
+
+                        break;
+                    }
+            }
+        }
     }
 }
