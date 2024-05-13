@@ -62,7 +62,7 @@
             viewEarnings_Button.Name = "viewEarnings_Button";
             viewEarnings_Button.Size = new Size(277, 40);
             viewEarnings_Button.TabIndex = 2;
-            viewEarnings_Button.Text = "View Earnings";
+            viewEarnings_Button.Text = "Manage Trainings";
             viewEarnings_Button.UseVisualStyleBackColor = false;
             // 
             // close_Button

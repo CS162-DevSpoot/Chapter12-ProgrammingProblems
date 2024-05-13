@@ -3,6 +3,7 @@
     public class Customer:Person
     {
         public bool MailingList { get; set; }
+        public int customerID { get; set; }
 
         public Customer() : base()
         {
