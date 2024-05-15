@@ -10,9 +10,10 @@
             MailingList = false;
         }
 
-        public Customer(string name, string address, int phone, bool mailList):base(name, address, phone)
+        public Customer(string name, string address, string phone, bool mailList, int ID):base(name, address, phone)
         {
             MailingList = mailList;
+            customerID = ID;
         }
     }
 }

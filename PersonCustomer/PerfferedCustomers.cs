@@ -2,8 +2,8 @@
 {
     public class PerfferedCustomers:Customer
     {
-        decimal PurchasedTotal { get; set; }
-        decimal DiscountLevel { get; set; }
+        public decimal PurchasedTotal { get; set; }
+        public decimal DiscountLevel { get; set; }
 
         public PerfferedCustomers() : base()
         {
@@ -11,7 +11,7 @@
             DiscountLevel = 0;
         }
 
-        public PerfferedCustomers(string name, string address, int phone, bool mailList, decimal purchased, ):base(name, address, phone, mailList)
+        public PerfferedCustomers(string name, string address, string phone, int id, bool mailList, decimal purchased):base(name, address, phone, mailList, id)
         {
             PurchasedTotal = purchased;
             DiscountLevel = getDiscountLevel();

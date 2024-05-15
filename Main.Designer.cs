@@ -30,6 +30,7 @@
         {
             factoryDemo_Button = new Button();
             exit_Button = new Button();
+            personCustomer_Button = new Button();
             SuspendLayout();
             // 
             // factoryDemo_Button
@@ -54,11 +55,22 @@
             exit_Button.UseVisualStyleBackColor = false;
             exit_Button.Click += exit_Button_Click;
             // 
+            // personCustomer_Button
+            // 
+            personCustomer_Button.Location = new Point(12, 41);
+            personCustomer_Button.Name = "personCustomer_Button";
+            personCustomer_Button.Size = new Size(214, 23);
+            personCustomer_Button.TabIndex = 2;
+            personCustomer_Button.Text = "Person Customer Demo";
+            personCustomer_Button.UseVisualStyleBackColor = true;
+            personCustomer_Button.Click += personCustomer_Button_Click;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(235, 450);
+            Controls.Add(personCustomer_Button);
             Controls.Add(exit_Button);
             Controls.Add(factoryDemo_Button);
             Name = "Main";
@@ -70,5 +82,6 @@
 
         private Button factoryDemo_Button;
         private Button exit_Button;
+        private Button personCustomer_Button;
     }
 }

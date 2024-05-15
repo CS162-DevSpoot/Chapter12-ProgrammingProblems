@@ -31,8 +31,8 @@
             groupBox1 = new GroupBox();
             name_TextBox = new TextBox();
             groupBox2 = new GroupBox();
-            groupBox3 = new GroupBox();
             phone_TextBox = new TextBox();
+            groupBox3 = new GroupBox();
             address_TextBox = new TextBox();
             groupBox4 = new GroupBox();
             mailingList_CheckBox = new CheckBox();
@@ -40,15 +40,15 @@
             purchases_TextBox = new TextBox();
             addCustomer_Button = new Button();
             groupBox6 = new GroupBox();
+            discount_Label = new Label();
             groupBox7 = new GroupBox();
+            customerID_Label = new Label();
             groupBox8 = new GroupBox();
+            address_Label = new Label();
             groupBox9 = new GroupBox();
+            phone_Label = new Label();
             groupBox10 = new GroupBox();
             name_Label = new Label();
-            phone_Label = new Label();
-            address_Label = new Label();
-            discount_Label = new Label();
-            customerID_Label = new Label();
             groupBox11 = new GroupBox();
             customerID_TextBox = new TextBox();
             groupBox12 = new GroupBox();
@@ -94,6 +94,13 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Phone Number";
             // 
+            // phone_TextBox
+            // 
+            phone_TextBox.Location = new Point(6, 22);
+            phone_TextBox.Name = "phone_TextBox";
+            phone_TextBox.Size = new Size(188, 23);
+            phone_TextBox.TabIndex = 0;
+            // 
             // groupBox3
             // 
             groupBox3.Controls.Add(address_TextBox);
@@ -103,13 +110,6 @@
             groupBox3.TabIndex = 2;
             groupBox3.TabStop = false;
             groupBox3.Text = "Address";
-            // 
-            // phone_TextBox
-            // 
-            phone_TextBox.Location = new Point(6, 22);
-            phone_TextBox.Name = "phone_TextBox";
-            phone_TextBox.Size = new Size(188, 23);
-            phone_TextBox.TabIndex = 0;
             // 
             // address_TextBox
             // 
@@ -163,6 +163,7 @@
             addCustomer_Button.TabIndex = 4;
             addCustomer_Button.Text = "Add Customer";
             addCustomer_Button.UseVisualStyleBackColor = true;
+            addCustomer_Button.Click += addCustomer_Clicked;
             // 
             // groupBox6
             // 
@@ -174,6 +175,16 @@
             groupBox6.TabStop = false;
             groupBox6.Text = "Discount Level";
             // 
+            // discount_Label
+            // 
+            discount_Label.BackColor = SystemColors.ControlLight;
+            discount_Label.Location = new Point(6, 20);
+            discount_Label.Name = "discount_Label";
+            discount_Label.Size = new Size(188, 23);
+            discount_Label.TabIndex = 1;
+            discount_Label.Text = "label4";
+            discount_Label.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // groupBox7
             // 
             groupBox7.Controls.Add(customerID_Label);
@@ -183,6 +194,16 @@
             groupBox7.TabIndex = 8;
             groupBox7.TabStop = false;
             groupBox7.Text = "Customer ID";
+            // 
+            // customerID_Label
+            // 
+            customerID_Label.BackColor = SystemColors.ControlLight;
+            customerID_Label.Location = new Point(6, 22);
+            customerID_Label.Name = "customerID_Label";
+            customerID_Label.Size = new Size(188, 23);
+            customerID_Label.TabIndex = 1;
+            customerID_Label.Text = "label5";
+            customerID_Label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // groupBox8
             // 
@@ -194,6 +215,16 @@
             groupBox8.TabStop = false;
             groupBox8.Text = "Address";
             // 
+            // address_Label
+            // 
+            address_Label.BackColor = SystemColors.ControlLight;
+            address_Label.Location = new Point(6, 20);
+            address_Label.Name = "address_Label";
+            address_Label.Size = new Size(188, 23);
+            address_Label.TabIndex = 1;
+            address_Label.Text = "label3";
+            address_Label.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // groupBox9
             // 
             groupBox9.Controls.Add(phone_Label);
@@ -203,6 +234,16 @@
             groupBox9.TabIndex = 5;
             groupBox9.TabStop = false;
             groupBox9.Text = "Phone Number";
+            // 
+            // phone_Label
+            // 
+            phone_Label.BackColor = SystemColors.ControlLight;
+            phone_Label.Location = new Point(6, 19);
+            phone_Label.Name = "phone_Label";
+            phone_Label.Size = new Size(188, 23);
+            phone_Label.TabIndex = 1;
+            phone_Label.Text = "label2";
+            phone_Label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // groupBox10
             // 
@@ -223,46 +264,6 @@
             name_Label.TabIndex = 0;
             name_Label.Text = "label1";
             name_Label.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // phone_Label
-            // 
-            phone_Label.BackColor = SystemColors.ControlLight;
-            phone_Label.Location = new Point(6, 19);
-            phone_Label.Name = "phone_Label";
-            phone_Label.Size = new Size(188, 23);
-            phone_Label.TabIndex = 1;
-            phone_Label.Text = "label2";
-            phone_Label.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // address_Label
-            // 
-            address_Label.BackColor = SystemColors.ControlLight;
-            address_Label.Location = new Point(6, 20);
-            address_Label.Name = "address_Label";
-            address_Label.Size = new Size(188, 23);
-            address_Label.TabIndex = 1;
-            address_Label.Text = "label3";
-            address_Label.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // discount_Label
-            // 
-            discount_Label.BackColor = SystemColors.ControlLight;
-            discount_Label.Location = new Point(6, 20);
-            discount_Label.Name = "discount_Label";
-            discount_Label.Size = new Size(188, 23);
-            discount_Label.TabIndex = 1;
-            discount_Label.Text = "label4";
-            discount_Label.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // customerID_Label
-            // 
-            customerID_Label.BackColor = SystemColors.ControlLight;
-            customerID_Label.Location = new Point(6, 22);
-            customerID_Label.Name = "customerID_Label";
-            customerID_Label.Size = new Size(188, 23);
-            customerID_Label.TabIndex = 1;
-            customerID_Label.Text = "label5";
-            customerID_Label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // groupBox11
             // 

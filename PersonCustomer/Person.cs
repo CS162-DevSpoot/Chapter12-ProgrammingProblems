@@ -4,16 +4,16 @@
     {
         public string Name { get; set; }
         public string Address { get; set; }
-        public int Phone { get; set; }
+        public string Phone { get; set; }
 
         public Person()
         {
             Name = "";
             Address = "";
-            Phone = 0;
+            Phone = "";
         }
 
-        public Person(string name, string address, int phone)
+        public Person(string name, string address, string phone)
         {
             Name = name;
             Address = address;
